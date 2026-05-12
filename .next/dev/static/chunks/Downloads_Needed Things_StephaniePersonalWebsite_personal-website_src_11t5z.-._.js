@@ -1,0 +1,1336 @@
+(globalThis["TURBOPACK"] || (globalThis["TURBOPACK"] = [])).push([typeof document === "object" ? document.currentScript : undefined,
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/lib/constants.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// Site-wide constants and configuration
+__turbopack_context__.s([
+    "ANIMATION_DURATION",
+    ()=>ANIMATION_DURATION,
+    "COLORS",
+    ()=>COLORS,
+    "NAVIGATION_ITEMS",
+    ()=>NAVIGATION_ITEMS,
+    "SITE_CONFIG",
+    ()=>SITE_CONFIG,
+    "SOCIAL_LINKS",
+    ()=>SOCIAL_LINKS
+]);
+const SITE_CONFIG = {
+    title: 'Stephanie Xia',
+    description: 'Interactive 3D Personal Website',
+    tagline: 'Engineer • Builder • Creator'
+};
+const NAVIGATION_ITEMS = [
+    {
+        label: 'Home',
+        href: '#home'
+    },
+    {
+        label: 'Me',
+        href: '#me'
+    },
+    {
+        label: 'Summers',
+        href: '#summers'
+    },
+    {
+        label: 'Projects',
+        href: '#projects'
+    },
+    {
+        label: 'Experience',
+        href: '#experience'
+    },
+    {
+        label: 'Fashion',
+        href: '#fashionista'
+    },
+    {
+        label: 'Contact',
+        href: '#contact'
+    }
+];
+const SOCIAL_LINKS = {
+    github: 'https://github.com',
+    linkedin: 'https://linkedin.com',
+    email: 'stephanie@example.com'
+};
+const COLORS = {
+    primary: '#ffd700',
+    secondary: '#ff8c42',
+    dark: '#0a0a0a',
+    accent: '#ffb88c'
+};
+const ANIMATION_DURATION = {
+    fast: 0.3,
+    normal: 0.5,
+    slow: 0.8,
+    verySlow: 1.2
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>Navigation
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/lib/constants.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+;
+function Navigation() {
+    _s();
+    const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+        className: "fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-warmDark to-transparent",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex justify-between items-center h-16",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex-shrink-0",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "#",
+                                className: "text-2xl font-bold text-warmGold hover:text-warmOrange transition",
+                                children: "SX"
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                                lineNumber: 15,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "hidden md:flex space-x-8",
+                            children: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NAVIGATION_ITEMS"].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    href: item.href,
+                                    className: "text-sm font-medium text-gray-300 hover:text-warmGold transition duration-300",
+                                    children: item.label
+                                }, item.href, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                                    lineNumber: 23,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "md:hidden",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>setIsOpen(!isOpen),
+                                className: "text-gray-300 hover:text-warmGold transition",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    className: "w-6 h-6",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    viewBox: "0 0 24 24",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: 2,
+                                        d: "M4 6h16M4 12h16M4 18h16"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                                        lineNumber: 40,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                                    lineNumber: 39,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                                lineNumber: 35,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                            lineNumber: 34,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, this),
+                isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "md:hidden pb-4 space-y-2",
+                    children: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NAVIGATION_ITEMS"].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: item.href,
+                            className: "block text-sm font-medium text-gray-300 hover:text-warmGold transition duration-300",
+                            onClick: ()=>setIsOpen(false),
+                            children: item.label
+                        }, item.href, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                            lineNumber: 50,
+                            columnNumber: 15
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+                    lineNumber: 48,
+                    columnNumber: 11
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+            lineNumber: 11,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, this);
+}
+_s(Navigation, "+sus0Lb0ewKHdwiUhiTAJFoFyQ0=");
+_c = Navigation;
+var _c;
+__turbopack_context__.k.register(_c, "Navigation");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>LoadingScreen
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+;
+function LoadingScreen() {
+    _s();
+    const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "LoadingScreen.useEffect": ()=>{
+            const timer = setTimeout({
+                "LoadingScreen.useEffect.timer": ()=>setIsLoading(false)
+            }["LoadingScreen.useEffect.timer"], 3000);
+            return ({
+                "LoadingScreen.useEffect": ()=>clearTimeout(timer)
+            })["LoadingScreen.useEffect"];
+        }
+    }["LoadingScreen.useEffect"], []);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+        className: "fixed inset-0 bg-gradient-to-b from-warmDark via-gray-900 to-warmDark flex items-center justify-center z-50",
+        exit: {
+            opacity: 0
+        },
+        transition: {
+            duration: 0.8
+        },
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "text-center",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                    initial: {
+                        opacity: 0,
+                        y: 20
+                    },
+                    animate: {
+                        opacity: 1,
+                        y: 0
+                    },
+                    transition: {
+                        duration: 0.8,
+                        delay: 0.2
+                    },
+                    className: "mb-8",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                            className: "text-4xl md:text-6xl font-bold text-warmGold mb-2",
+                            children: "Stephanie Xia"
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+                            lineNumber: 28,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-lg text-gray-400",
+                            children: "memories loading…"
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+                            lineNumber: 31,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                    className: "w-32 h-1 bg-gray-700 rounded-full overflow-hidden mx-auto",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        className: "h-full bg-gradient-to-r from-warmGold to-warmOrange",
+                        initial: {
+                            width: '0%'
+                        },
+                        animate: {
+                            width: '100%'
+                        },
+                        transition: {
+                            duration: 2.5,
+                            ease: 'easeInOut'
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+                        lineNumber: 36,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+                    lineNumber: 35,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mt-12 space-y-2",
+                    children: [
+                        ...Array(3)
+                    ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                            className: "w-2 h-2 bg-warmGold rounded-full mx-auto",
+                            animate: {
+                                y: [
+                                    0,
+                                    -10,
+                                    0
+                                ],
+                                opacity: [
+                                    0.3,
+                                    1,
+                                    0.3
+                                ]
+                            },
+                            transition: {
+                                duration: 1.5,
+                                delay: i * 0.2,
+                                repeat: Infinity
+                            }
+                        }, i, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+                            lineNumber: 47,
+                            columnNumber: 13
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+                    lineNumber: 45,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+            lineNumber: 20,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx",
+        lineNumber: 15,
+        columnNumber: 5
+    }, this);
+}
+_s(LoadingScreen, "Yt82d/dvZsn5nYh5sqDQjv+rJ38=");
+_c = LoadingScreen;
+var _c;
+__turbopack_context__.k.register(_c, "LoadingScreen");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>LandingPage
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+;
+function LandingPage() {
+    _s();
+    const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        ref: containerRef,
+        className: "relative w-full h-screen flex items-center justify-center bg-gradient-to-b from-warmDark via-gray-900 to-warmDark overflow-hidden pt-16",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 overflow-hidden",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        className: "absolute w-96 h-96 bg-warmGold rounded-full filter blur-3xl opacity-20",
+                        animate: {
+                            x: [
+                                0,
+                                100,
+                                -50,
+                                0
+                            ],
+                            y: [
+                                0,
+                                -100,
+                                50,
+                                0
+                            ]
+                        },
+                        transition: {
+                            duration: 15,
+                            repeat: Infinity,
+                            ease: 'easeInOut'
+                        },
+                        style: {
+                            top: '10%',
+                            left: '10%'
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        className: "absolute w-96 h-96 bg-warmOrange rounded-full filter blur-3xl opacity-10",
+                        animate: {
+                            x: [
+                                0,
+                                -100,
+                                50,
+                                0
+                            ],
+                            y: [
+                                0,
+                                100,
+                                -50,
+                                0
+                            ]
+                        },
+                        transition: {
+                            duration: 20,
+                            repeat: Infinity,
+                            ease: 'easeInOut'
+                        },
+                        style: {
+                            bottom: '10%',
+                            right: '10%'
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-10 text-center px-4 md:px-8 max-w-4xl",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        initial: {
+                            opacity: 0,
+                            y: 20
+                        },
+                        animate: {
+                            opacity: 1,
+                            y: 0
+                        },
+                        transition: {
+                            duration: 0.8
+                        },
+                        className: "space-y-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                className: "text-5xl md:text-7xl font-bold bg-gradient-to-r from-warmGold to-warmPeach bg-clip-text text-transparent",
+                                children: "Stephanie Xia"
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                                lineNumber: 52,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-xl md:text-2xl text-gray-400",
+                                children: "Engineer • Builder • Creator"
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                                lineNumber: 56,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed",
+                                children: "Exploring growth through creative engineering. This is a cinematic journey through memories, projects, and evolving identity."
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                                lineNumber: 60,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                        lineNumber: 46,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        initial: {
+                            opacity: 0,
+                            y: 20
+                        },
+                        animate: {
+                            opacity: 1,
+                            y: 0
+                        },
+                        transition: {
+                            duration: 0.8,
+                            delay: 0.3
+                        },
+                        className: "flex flex-col sm:flex-row gap-4 justify-center mt-12",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "#me",
+                                className: "px-8 py-3 bg-warmGold text-warmDark font-semibold rounded hover:bg-warmOrange transition duration-300",
+                                children: "Explore"
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                                lineNumber: 73,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "#contact",
+                                className: "px-8 py-3 border-2 border-warmGold text-warmGold font-semibold rounded hover:bg-warmGold hover:text-warmDark transition duration-300",
+                                children: "Get in Touch"
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                                lineNumber: 79,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                        lineNumber: 67,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        animate: {
+                            y: [
+                                0,
+                                10,
+                                0
+                            ]
+                        },
+                        transition: {
+                            duration: 2,
+                            repeat: Infinity
+                        },
+                        className: "absolute bottom-8 left-1/2 transform -translate-x-1/2 text-warmGold",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                            className: "w-6 h-6",
+                            fill: "none",
+                            stroke: "currentColor",
+                            viewBox: "0 0 24 24",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                strokeWidth: 2,
+                                d: "M19 14l-7 7m0 0l-7-7m7 7V3"
+                            }, void 0, false, {
+                                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                                lineNumber: 94,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                            lineNumber: 93,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                        lineNumber: 88,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+                lineNumber: 45,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, this);
+}
+_s(LandingPage, "5okL0DAk6Atnb3+Rru+wGBWyP+4=");
+_c = LandingPage;
+var _c;
+__turbopack_context__.k.register(_c, "LandingPage");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>MeSection
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+'use client';
+;
+function MeSection() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        id: "me",
+        className: "min-h-screen w-full bg-gradient-to-b from-warmDark to-gray-900 flex items-center justify-center",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-4xl mx-auto px-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    className: "text-5xl md:text-6xl font-bold text-warmGold mb-8",
+                    children: "About Me"
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-xl text-gray-400",
+                    children: [
+                        "TODO: Build your identity section with:",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                            className: "list-disc list-inside mt-4 space-y-2 text-lg",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Short intro & identity statement"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+                                    lineNumber: 11,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Engineering interests & systems thinking"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+                                    lineNumber: 12,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Startup curiosity & building mentality"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+                                    lineNumber: 13,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Key themes: AI, systems, robotics, product thinking, storytelling, fashion, entrepreneurship"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = MeSection;
+var _c;
+__turbopack_context__.k.register(_c, "MeSection");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>SummersSection
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+'use client';
+;
+function SummersSection() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        id: "summers",
+        className: "min-h-screen w-full bg-gradient-to-b from-gray-900 to-warmDark flex items-center justify-center",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-4xl mx-auto px-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    className: "text-5xl md:text-6xl font-bold text-warmGold mb-8",
+                    children: "Summers"
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-xl text-gray-400",
+                    children: [
+                        "TODO: Build your memory archive system for 2023, 2024, 2025 summers with:",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                            className: "list-disc list-inside mt-4 space-y-2 text-lg",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Interactive environmental storytelling"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+                                    lineNumber: 11,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Scroll-based transitions with lighting changes"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+                                    lineNumber: 12,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Interactive memory objects revealing photos & details"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+                                    lineNumber: 13,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Each summer as a growth chapter with explorable environments"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Cinematic motion and atmospheric depth"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+                                    lineNumber: 15,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = SummersSection;
+var _c;
+__turbopack_context__.k.register(_c, "SummersSection");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>ProjectsSection
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+'use client';
+;
+function ProjectsSection() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        id: "projects",
+        className: "min-h-screen w-full bg-gradient-to-b from-warmDark to-gray-900 flex items-center justify-center",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-4xl mx-auto px-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    className: "text-5xl md:text-6xl font-bold text-warmGold mb-8",
+                    children: "Projects"
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-xl text-gray-400",
+                    children: [
+                        "TODO: Showcase your technical depth with:",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                            className: "list-disc list-inside mt-4 space-y-2 text-lg",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Interactive project cards with hover animations"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+                                    lineNumber: 11,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Each project showing: Problem, Solution, Process, Tech Stack, Challenges, Outcome"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+                                    lineNumber: 12,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "3D project objects, animated architecture flows"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+                                    lineNumber: 13,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Live demos & embedded videos"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Polished, technical aesthetic"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+                                    lineNumber: 15,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = ProjectsSection;
+var _c;
+__turbopack_context__.k.register(_c, "ProjectsSection");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>ExperienceSection
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+'use client';
+;
+function ExperienceSection() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        id: "experience",
+        className: "min-h-screen w-full bg-gradient-to-b from-gray-900 to-warmDark flex items-center justify-center",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-4xl mx-auto px-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    className: "text-5xl md:text-6xl font-bold text-warmGold mb-8",
+                    children: "Experience"
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-xl text-gray-400",
+                    children: [
+                        "TODO: Present your experience professionally with:",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                            className: "list-disc list-inside mt-4 space-y-2 text-lg",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Timeline structure with glowing nodes"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+                                    lineNumber: 11,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Include: SHAD, FBLC, Finance International, VEX Robotics, leadership initiatives"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+                                    lineNumber: 12,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Subtle interactions & minimal motion"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+                                    lineNumber: 13,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Clean, minimal aesthetic"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Elegant typography"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+                                    lineNumber: 15,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = ExperienceSection;
+var _c;
+__turbopack_context__.k.register(_c, "ExperienceSection");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>FashionSection
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+'use client';
+;
+function FashionSection() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        id: "fashionista",
+        className: "min-h-screen w-full bg-gradient-to-b from-warmDark to-gray-900 flex items-center justify-center",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-4xl mx-auto px-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    className: "text-5xl md:text-6xl font-bold text-warmGold mb-8",
+                    children: "Fashion & Creativity"
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-xl text-gray-400",
+                    children: [
+                        "TODO: Show your multidimensional identity with:",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                            className: "list-disc list-inside mt-4 space-y-2 text-lg",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Editorial, cinematic design aesthetic"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                                    lineNumber: 11,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Magazine-inspired grids & curated collections"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                                    lineNumber: 12,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Rotating photo galleries & floating polaroids"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                                    lineNumber: 13,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Runway-inspired transitions"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Hover-based interactions & cinematic lighting"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                                    lineNumber: 15,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Express creativity, confidence, artistic expression"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                                    lineNumber: 16,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = FashionSection;
+var _c;
+__turbopack_context__.k.register(_c, "FashionSection");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>ContactSection
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/lib/constants.ts [app-client] (ecmascript)");
+'use client';
+;
+;
+function ContactSection() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        id: "contact",
+        className: "min-h-screen w-full bg-gradient-to-b from-gray-900 to-warmDark flex items-center justify-center",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "max-w-4xl mx-auto px-4 text-center",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    className: "text-5xl md:text-6xl font-bold text-warmGold mb-8",
+                    children: "Let's Build Something Cool"
+                }, void 0, false, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-xl text-gray-400 mb-12",
+                    children: [
+                        "TODO: Create a warm, approachable ending with:",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                            className: "list-disc list-inside mt-4 space-y-2 text-lg",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Email form for inquiries"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "LinkedIn, GitHub, Resume links"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                                    lineNumber: 15,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Friendly but intentional tone"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                                    lineNumber: 16,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    children: "Visual warmth & human connection"
+                                }, void 0, false, {
+                                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                                    lineNumber: 17,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                            lineNumber: 13,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex justify-center gap-8 flex-wrap",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: `mailto:${__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SOCIAL_LINKS"].email}`,
+                            className: "px-6 py-3 border-2 border-warmGold text-warmGold rounded hover:bg-warmGold hover:text-warmDark transition",
+                            children: "Email"
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                            lineNumber: 23,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SOCIAL_LINKS"].linkedin,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            className: "px-6 py-3 border-2 border-warmGold text-warmGold rounded hover:bg-warmGold hover:text-warmDark transition",
+                            children: "LinkedIn"
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                            lineNumber: 29,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SOCIAL_LINKS"].github,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            className: "px-6 py-3 border-2 border-warmGold text-warmGold rounded hover:bg-warmGold hover:text-warmDark transition",
+                            children: "GitHub"
+                        }, void 0, false, {
+                            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                            lineNumber: 37,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, this);
+}
+_c = ContactSection;
+var _c;
+__turbopack_context__.k.register(_c, "ContactSection");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>Home
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/Navigation.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$LoadingScreen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/LoadingScreen.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$LandingPage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/LandingPage.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Me$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Me.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Summers$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Summers.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Projects$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Projects.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Experience$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Experience.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Fashion$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Fashion.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Contact$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/components/sections/Contact.tsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+function Home() {
+    _s();
+    const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Home.useEffect": ()=>{
+            // Simulate loading time - remove or adjust based on your needs
+            const timer = setTimeout({
+                "Home.useEffect.timer": ()=>{
+                    setIsLoading(false);
+                }
+            }["Home.useEffect.timer"], 2000);
+            return ({
+                "Home.useEffect": ()=>clearTimeout(timer)
+            })["Home.useEffect"];
+        }
+    }["Home.useEffect"], []);
+    if (isLoading) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$LoadingScreen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+            lineNumber: 27,
+            columnNumber: 12
+        }, this);
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+        className: "w-full",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$Navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+                lineNumber: 32,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$LandingPage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+                lineNumber: 33,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Me$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+                lineNumber: 34,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Summers$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+                lineNumber: 35,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Projects$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+                lineNumber: 36,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Experience$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+                lineNumber: 37,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Fashion$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+                lineNumber: 38,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$Needed__Things$2f$StephaniePersonalWebsite$2f$personal$2d$website$2f$src$2f$components$2f$sections$2f$Contact$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+                lineNumber: 39,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/Downloads/Needed Things/StephaniePersonalWebsite/personal-website/src/app/page.tsx",
+        lineNumber: 31,
+        columnNumber: 5
+    }, this);
+}
+_s(Home, "Yt82d/dvZsn5nYh5sqDQjv+rJ38=");
+_c = Home;
+var _c;
+__turbopack_context__.k.register(_c, "Home");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+]);
+
+//# sourceMappingURL=Downloads_Needed%20Things_StephaniePersonalWebsite_personal-website_src_11t5z.-._.js.map

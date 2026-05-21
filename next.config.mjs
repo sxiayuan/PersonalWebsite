@@ -4,8 +4,8 @@ import path from 'node:path';
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/PersonalWebsite',
-  assetPrefix: '/PersonalWebsite/',
+  basePath: process.env.NODE_ENV === 'production' ? '/PersonalWebsite' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/PersonalWebsite/' : '',
   turbopack: {
     root: path.resolve('.'),
   },

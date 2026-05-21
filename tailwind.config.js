@@ -14,6 +14,16 @@ module.exports = {
         warmOrange: '#ff8c42',
         warmPeach: '#ffb88c',
         warmAmber: '#ffa500',
+        // Extracted custom palette
+        sageMist: '#A1BCB3',
+        forestSlate: '#4A5F4A',
+        softLinen: '#E5DCEF',
+        blushStone: '#CCB5A8',
+        roseCloud: '#F4DCDC',
+        dustyRose: '#B38078',
+        antiqueGold: '#AE9442',
+        charcoalMoss: '#363835',
+        fogOlive: '#93978F',
       },
       animation: {
         fadeIn: 'fadeIn 0.8s ease-in-out',

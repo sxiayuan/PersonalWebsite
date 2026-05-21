@@ -5,7 +5,7 @@ export default function ContactSection() {
   const { socialLinks } = SITE_CONTENT;
 
   return (
-    <section id="contact" className="min-h-screen w-full bg-gradient-to-b from-gray-900 to-warmDark flex items-center justify-center">
+    <section id="contact" className="min-h-screen w-full flex items-center justify-center">
       <article className="max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-5xl md:text-6xl font-bold text-warmGold mb-8">{title}</h2>
         <p className="text-xl text-gray-300 mb-12">{intro}</p>

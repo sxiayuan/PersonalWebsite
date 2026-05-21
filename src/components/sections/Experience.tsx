@@ -4,7 +4,11 @@ export default function ExperienceSection() {
   const { title, intro, points } = SITE_CONTENT.sections.experience;
 
   return (
-    <section id="experience" className="min-h-screen w-full bg-gradient-to-b from-gray-900 to-warmDark flex items-center justify-center">
+    <section
+      id="experience"
+      className="min-h-screen w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/experience-background.png')" }}
+    >
       <article className="max-w-4xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-warmGold mb-8">{title}</h2>
         <p className="text-xl text-gray-300 leading-relaxed">{intro}</p>

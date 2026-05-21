@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { SITE_CONTENT } from '@/data/siteContent';
 
@@ -8,26 +10,36 @@ export default function Navigation() {
   const navigationItems = SITE_CONTENT.navigation;
 
   return (
-    <nav aria-label="Primary" className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-warmDark to-transparent">
+    <nav aria-label="Primary" className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
-            <a href="#home" className="text-2xl font-bold text-warmGold hover:text-warmOrange transition">
-              SX
-            </a>
+            <Link
+              href="/"
+              aria-label="Back to home"
+              className="block h-9 w-9 overflow-hidden rounded-full border border-fogOlive/60 transition hover:scale-105 hover:border-charcoalMoss"
+            >
+              <Image
+                src="/profile-icon.jpg"
+                alt="Stephanie Xia"
+                width={36}
+                height={36}
+                className="h-full w-full object-cover"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navigationItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="text-sm font-medium text-gray-300 hover:text-warmGold transition duration-300"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -50,14 +62,14 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2">
             {navigationItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="block text-sm font-medium text-gray-300 hover:text-warmGold transition duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         )}

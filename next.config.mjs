@@ -4,6 +4,9 @@ import path from 'node:path';
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  images: {
+    unoptimized: true,
+  },
   basePath: process.env.NODE_ENV === 'production' ? '/PersonalWebsite' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/PersonalWebsite/' : '',
   turbopack: {

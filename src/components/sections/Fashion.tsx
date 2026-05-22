@@ -1,6 +1,5 @@
 export default function FashionSection() {
   const placeholderCards = Array.from({ length: 6 }, (_, index) => index + 1);
-  const archiveCards = Array.from({ length: 6 }, (_, index) => index + 1);
 
   return (
     <div className="w-full bg-[#e9e9e9] py-8 md:py-10">

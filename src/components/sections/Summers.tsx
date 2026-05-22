@@ -6,7 +6,7 @@ import { SITE_CONTENT } from '@/data/siteContent';
 export default function SummersSection() {
   const slides = SITE_CONTENT.sections.summers.slides;
   const [slideIndex, setSlideIndex] = useState(1);
-  const [draftBodies, setDraftBodies] = useState(() => slides.map((slide) => slide.body));
+  const [draftBodies, setDraftBodies] = useState<string[]>(() => slides.map((slide) => slide.body));
 
   const activeSlide = slides[slideIndex];
   const activeBody = draftBodies[slideIndex];

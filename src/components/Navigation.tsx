@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { SITE_CONTENT } from '@/data/siteContent';
+import { withBasePath } from '@/lib/withBasePath';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Navigation() {
               className="block h-9 w-9 overflow-hidden rounded-full border border-fogOlive/60 transition hover:scale-105 hover:border-charcoalMoss"
             >
               <Image
-                src="/profile-icon.jpg"
+                src={withBasePath('/profile-icon.jpg')}
                 alt="Stephanie Xia"
                 width={36}
                 height={36}

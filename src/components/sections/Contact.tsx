@@ -1,4 +1,5 @@
 import { SITE_CONTENT } from '@/data/siteContent';
+import { withBasePath } from '@/lib/withBasePath';
 
 export default function ContactSection() {
   const { title, intro } = SITE_CONTENT.sections.contact;
@@ -35,7 +36,7 @@ export default function ContactSection() {
             GitHub
           </a>
           <a
-            href={socialLinks.resume}
+            href={withBasePath(socialLinks.resume)}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 border-2 border-warmGold text-warmGold rounded hover:bg-warmGold hover:text-warmDark transition"

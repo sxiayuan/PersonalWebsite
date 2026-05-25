@@ -5,6 +5,7 @@ import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { CanvasTexture, LinearFilter, SRGBColorSpace } from 'three';
 import CanvasScene from '@/components/CanvasScene';
+import { withBasePath } from '@/lib/withBasePath';
 
 const CAMERA_MODEL_POSITION: [number, number, number] = [0, -2.4, 0];
 const ORBIT_TARGET_OFFSET: [number, number, number] = [0, 1, 0];
@@ -75,7 +76,7 @@ function PlaceholderPowerShot() {
 
     const image = new Image();
     let cancelled = false;
-    image.src = '/camera-screen-reference.png';
+    image.src = withBasePath('/camera-screen-reference.png');
     image.onload = () => {
       if (cancelled) {
         return;

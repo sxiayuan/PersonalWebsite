@@ -1,4 +1,5 @@
 import { SITE_CONTENT } from '@/data/siteContent';
+import { withBasePath } from '@/lib/withBasePath';
 
 export default function ExperienceSection() {
   const { title, intro, points } = SITE_CONTENT.sections.experience;
@@ -7,7 +8,7 @@ export default function ExperienceSection() {
     <section
       id="experience"
       className="min-h-screen w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/experience-background.png')" }}
+      style={{ backgroundImage: `url('${withBasePath('/experience-background.png')}')` }}
     >
       <article className="max-w-4xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-warmGold mb-8">{title}</h2>

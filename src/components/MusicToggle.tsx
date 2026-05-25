@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import { withBasePath } from '@/lib/withBasePath';
 
 export default function MusicToggle() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -56,7 +57,7 @@ export default function MusicToggle() {
     >
       {!isPlaying ? (
         <Image
-          src="/music/cassette-tape.webp"
+          src={withBasePath('/music/cassette-tape.webp')}
           alt="Cassette tape music toggle"
           width={86}
           height={64}
@@ -65,14 +66,14 @@ export default function MusicToggle() {
       ) : (
         <video
           ref={videoRef}
-          src="/music/cassette-tape.mp4"
+          src={withBasePath('/music/cassette-tape.mp4')}
           className="h-full w-full object-cover"
           loop
           muted
           playsInline
         />
       )}
-      <audio ref={audioRef} src="/music/wantchu.mp3" loop />
+      <audio ref={audioRef} src={withBasePath('/music/wantchu.mp3')} loop />
     </button>
   );
 }

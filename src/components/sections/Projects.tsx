@@ -1,4 +1,5 @@
 import { SITE_CONTENT } from '@/data/siteContent';
+import { withBasePath } from '@/lib/withBasePath';
 
 export default function ProjectsSection() {
   const { title, cards } = SITE_CONTENT.sections.projects;
@@ -7,7 +8,7 @@ export default function ProjectsSection() {
     <section
       id="projects"
       className="relative min-h-screen w-full overflow-x-hidden bg-cover bg-center bg-no-repeat px-4 py-10 pb-20 md:px-8 md:pb-28"
-      style={{ backgroundImage: "url('/projects-background.jpg')" }}
+      style={{ backgroundImage: `url('${withBasePath('/projects-background.jpg')}')` }}
     >
       <h2 className="absolute left-6 top-8 text-4xl font-light tracking-wide text-white md:text-6xl">
         {title.toUpperCase()}

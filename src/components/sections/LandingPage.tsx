@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import MusicToggle from '@/components/MusicToggle';
+import { withBasePath } from '@/lib/withBasePath';
 
 const HeroScene = dynamic(() => import('@/components/three/HeroScene'), {
   ssr: false,
@@ -39,7 +40,7 @@ export default function LandingPage() {
         className="fixed left-3 top-3 z-30 block h-9 w-9 overflow-hidden rounded-full border border-fogOlive/60 transition hover:scale-105 hover:border-charcoalMoss"
       >
         <Image
-          src="/profile-icon.jpg"
+          src={withBasePath('/profile-icon.jpg')}
           alt="Stephanie Xia"
           width={36}
           height={36}
@@ -58,7 +59,7 @@ export default function LandingPage() {
             className="block w-14 shrink-0 transition hover:scale-105"
           >
             <Image
-              src={item.icon}
+              src={withBasePath(item.icon)}
               alt={`${item.name} icon`}
               width={56}
               height={56}

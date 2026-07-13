@@ -14,6 +14,7 @@ const ORBIT_TARGET: [number, number, number] = [
   CAMERA_MODEL_POSITION[1] + ORBIT_TARGET_OFFSET[1],
   CAMERA_MODEL_POSITION[2] + ORBIT_TARGET_OFFSET[2],
 ];
+const COMPACT_ORBIT_TARGET: [number, number, number] = [...CAMERA_MODEL_POSITION];
 const SCENE_X_OFFSET_PX: number = 350;
 
 function PlaceholderPowerShot() {
@@ -178,17 +179,22 @@ function PlaceholderPowerShot() {
   );
 }
 
-function HeroSceneFallback() {
+interface HeroSceneProps {
+  compact?: boolean;
+}
+
+function HeroSceneFallback({ compact }: { compact?: boolean }) {
   return (
     <div
       aria-hidden="true"
-      className="absolute inset-0"
+      className={compact ? 'h-full w-full rounded-full bg-[#F4DCDC]' : 'absolute inset-0 bg-[#F4DCDC]'}
       style={{ backgroundColor: '#F4DCDC' }}
     />
   );
 }
 
-export default function HeroScene() {
+
+export default function HeroScene({ compact = false }: HeroSceneProps = {}) {
   const canRender3D = (() => {
     if (typeof window === 'undefined') {
       return false;
@@ -202,18 +208,20 @@ export default function HeroScene() {
   })();
 
   if (!canRender3D) {
-    return <HeroSceneFallback />;
+    return <HeroSceneFallback compact={compact} />;
   }
 
+  const wrapperStyle = compact ? undefined : { transform: `translateX(${SCENE_X_OFFSET_PX}px)` };
+  const cameraProps = compact
+    ? { position: [0, CAMERA_MODEL_POSITION[1], 5.2] as [number, number, number], fov: 46 }
+    : { position: [0, 0, 5] as [number, number, number], fov: 40 };
+  const orbitTarget = compact ? COMPACT_ORBIT_TARGET : ORBIT_TARGET;
+
   return (
-    <div
-      aria-hidden="true"
-      className="absolute inset-0"
-      style={{ transform: `translateX(${SCENE_X_OFFSET_PX}px)` }}
-    >
+    <div aria-hidden="true" className="absolute inset-0 bg-transparent" style={wrapperStyle}>
       <CanvasScene
-        dpr={[1, 1.5]}
-        camera={{ position: [0, 0, 5], fov: 40 }}
+        dpr={compact ? [1, 1.25] : [1, 1.5]}
+        camera={cameraProps}
         performance={{ min: 0.4, max: 1, debounce: 240 }}
       >
         <ambientLight intensity={0.9} />
@@ -223,7 +231,7 @@ export default function HeroScene() {
         <OrbitControls
           enablePan={false}
           enableZoom={false}
-          target={ORBIT_TARGET}
+          target={orbitTarget}
           minPolarAngle={Math.PI / 2 - 0.5}
           maxPolarAngle={Math.PI / 2 + 0.5}
           rotateSpeed={0.72}

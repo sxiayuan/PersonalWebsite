@@ -34,9 +34,21 @@ export default function CanvasScene({
       dpr={dpr}
       frameloop={frameloop}
       camera={camera}
-      gl={{ antialias: true, powerPreference: 'high-performance' }}
+      flat
+      gl={{ 
+        antialias: true, 
+        powerPreference: 'high-performance', 
+        alpha: true,
+        premultipliedAlpha: true,
+        stencil: false,
+      }}
       performance={performance}
-      className="w-full h-full"
+      className="w-full h-full bg-transparent"
+      style={{ background: 'transparent', backgroundColor: 'transparent' }}
+      onCreated={({ gl }) => {
+        gl.setClearColor(0x000000, 0);
+        gl.setClearAlpha(0);
+      }}
     >
       <Suspense fallback={fallback || null}>
         {children}

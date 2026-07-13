@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="overflow-x-hidden" suppressHydrationWarning>
+    <html lang="en" style={{ backgroundColor: '#F4DCDC' }}>
+      <body className="overflow-x-hidden" style={{ backgroundColor: '#F4DCDC' }} suppressHydrationWarning>
         {children}
       </body>
     </html>

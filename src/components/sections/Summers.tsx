@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useMemo, useState } from 'react';
 import TopNav from '@/components/TopNav';
+import { withBasePath } from '@/lib/withBasePath';
 
 const HeroScene = dynamic(() => import('@/components/three/HeroScene'), {
   ssr: false,
@@ -194,7 +195,7 @@ export default function SummersSection() {
         className="absolute bottom-10 left-10 z-10 flex flex-col items-center gap-3 rounded-[24px] border border-white/70 bg-white/80 p-4 shadow-[0_20px_40px_rgba(15,23,42,0.16)] backdrop-blur-xl transition-transform duration-200 hover:-translate-y-1"
       >
         <img
-          src="/finder.png"
+          src={withBasePath('/finder.png')}
           alt="Finder app icon"
           className="h-16 w-16 object-contain"
           style={{ filter: 'drop-shadow(0 10px 16px rgba(15,23,42,0.35))' }}
@@ -282,7 +283,7 @@ export default function SummersSection() {
                     className="group flex flex-col items-center gap-2.5 rounded-2xl px-3 py-4 text-center transition hover:bg-blue-500/10 focus-visible:bg-blue-500/15 focus-visible:outline-none"
                   >
                     <img
-                      src="/folder.png"
+                      src={withBasePath('/folder.png')}
                       alt=""
                       aria-hidden="true"
                       className="h-20 w-20 object-contain transition-transform duration-200 group-hover:scale-105"
@@ -305,7 +306,7 @@ export default function SummersSection() {
 
                 <div className="mb-9 flex items-start gap-5">
                   <img
-                    src="/folder.png"
+                    src={withBasePath('/folder.png')}
                     alt=""
                     aria-hidden="true"
                     className="h-16 w-16 shrink-0 object-contain"
@@ -335,4 +336,3 @@ export default function SummersSection() {
     </section>
   );
 }
-

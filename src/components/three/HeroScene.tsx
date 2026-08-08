@@ -7,7 +7,7 @@ import { CanvasTexture, LinearFilter, SRGBColorSpace } from 'three';
 import CanvasScene from '@/components/CanvasScene';
 import { withBasePath } from '@/lib/withBasePath';
 
-const CAMERA_MODEL_POSITION: [number, number, number] = [0, -2.4, 0];
+const CAMERA_MODEL_POSITION: [number, number, number] = [0, -3.2, 0];
 const ORBIT_TARGET_OFFSET: [number, number, number] = [0, 1, 0];
 const ORBIT_TARGET: [number, number, number] = [
   CAMERA_MODEL_POSITION[0] + ORBIT_TARGET_OFFSET[0],
@@ -16,11 +16,12 @@ const ORBIT_TARGET: [number, number, number] = [
 ];
 const COMPACT_ORBIT_TARGET: [number, number, number] = [...CAMERA_MODEL_POSITION];
 const SCENE_X_OFFSET_PX: number = 350;
+const SCENE_Y_OFFSET_PX: number = 110;
 
 function PlaceholderPowerShot() {
   const router = useRouter();
   const screenHotspots = [
-    { id: 'me', href: '/me', y: 0.374 },
+    { id: 'me', href: '/', y: 0.374 },
     { id: 'summers', href: '/summers', y: 0.169 },
     { id: 'projects', href: '/projects', y: -0.036 },
     { id: 'experience', href: '/experience', y: -0.241 },
@@ -93,7 +94,7 @@ function PlaceholderPowerShot() {
   }, [screenTexture]);
 
   return (
-    <group position={CAMERA_MODEL_POSITION} scale={0.575}>
+    <group position={CAMERA_MODEL_POSITION} scale={0.95}>
       {/* Camera body */}
       <mesh castShadow receiveShadow>
         <boxGeometry args={[3.2, 2.15, 0.55]} />
@@ -211,7 +212,9 @@ export default function HeroScene({ compact = false }: HeroSceneProps = {}) {
     return <HeroSceneFallback compact={compact} />;
   }
 
-  const wrapperStyle = compact ? undefined : { transform: `translateX(${SCENE_X_OFFSET_PX}px)` };
+  const wrapperStyle = compact
+    ? undefined
+    : { transform: `translateX(${SCENE_X_OFFSET_PX}px) translateY(${SCENE_Y_OFFSET_PX}px)` };
   const cameraProps = compact
     ? { position: [0, CAMERA_MODEL_POSITION[1], 5.2] as [number, number, number], fov: 46 }
     : { position: [0, 0, 5] as [number, number, number], fov: 40 };

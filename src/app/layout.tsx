@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import SmoothScroll from '@/components/SmoothScroll';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" style={{ backgroundColor: '#F4DCDC' }}>
       <body className="overflow-x-hidden" style={{ backgroundColor: '#F4DCDC' }} suppressHydrationWarning>
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

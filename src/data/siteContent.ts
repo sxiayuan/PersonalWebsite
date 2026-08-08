@@ -6,7 +6,7 @@ export const SITE_CONTENT = {
       'Exploring growth through creative engineering. This is a cinematic journey through memories, projects, and evolving identity.',
     primaryCta: {
       label: 'Explore',
-      href: '/me',
+      href: '/',
     },
     secondaryCta: {
       label: 'Get in Touch',
@@ -15,7 +15,6 @@ export const SITE_CONTENT = {
   },
   navigation: [
     { label: 'Home', href: '/' },
-    { label: 'Me', href: '/me' },
     { label: 'Summers', href: '/summers' },
     { label: 'Projects', href: '/projects' },
     { label: 'Experience', href: '/experience' },

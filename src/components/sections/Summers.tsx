@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 import TopNav from '@/components/TopNav';
 import { withBasePath } from '@/lib/withBasePath';
@@ -17,7 +18,7 @@ type Photo = {
 type Folder = {
   label: string;
   slug: string;
-  description: string;
+  description: string | string[];
   photos: Photo[];
 };
 
@@ -31,28 +32,16 @@ function makePhotos(slug: string): Photo[] {
 
 const folders: Folder[] = [
   {
-    label: 'Old Days',
-    slug: 'old-days',
-    description: 'A soft archive of early summer memories, printed Polaroids, and offline nostalgia.',
-    photos: makePhotos('old-days'),
-  },
-  {
-    label: '2022',
-    slug: '2022',
-    description: 'The start of a new chapter. Sunlit afternoons, first creative experiments, and growth.',
-    photos: makePhotos('2022'),
-  },
-  {
-    label: '2023',
-    slug: '2023',
-    description: 'A bold summer of experiments, new routines, and more cinematic memories.',
-    photos: makePhotos('2023'),
-  },
-  {
-    label: '2024',
-    slug: '2024',
-    description: 'A season of momentum, polished ideas, and soft discovery.',
-    photos: makePhotos('2024'),
+    label: '2026',
+    slug: '2026',
+    description: [
+      "Interned at Magic Hour (YC W24) and learned how to optimize image generation from scratch",
+      'Travelled to Korea, Japan and Thailand for the first time (lots of cultural shocks!)',
+      'Went to World Artificial Intelligence Conference in Shanghai',
+      'Applied to YC',
+      'Started learning how to edit videos after admiring Instagram videos all year',
+    ],
+    photos: makePhotos('2026'),
   },
   {
     label: '2025',
@@ -61,10 +50,10 @@ const folders: Folder[] = [
     photos: makePhotos('2025'),
   },
   {
-    label: '2026',
-    slug: '2026',
-    description: 'A preview of what comes next: bright intentions, curated visuals, and quiet confidence.',
-    photos: makePhotos('2026'),
+    label: '2024',
+    slug: '2024',
+    description: 'A season of momentum, polished ideas, and soft discovery.',
+    photos: makePhotos('2024'),
   },
 ];
 
@@ -134,7 +123,7 @@ export default function SummersSection() {
 
   useEffect(() => {
     backgrounds.forEach((src) => {
-      const img = new Image();
+      const img = new window.Image();
       img.src = src;
     });
   }, [backgrounds]);
@@ -180,38 +169,40 @@ export default function SummersSection() {
       : 'scale-0 opacity-0';
 
   return (
-    <section id="summers" className="relative min-h-screen w-full overflow-hidden bg-slate-100/80">
+    <section id="summers" className="relative min-h-svh w-full overflow-hidden bg-slate-100/80">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center transition-opacity duration-700"
         style={{ backgroundImage: `url(${backgrounds[activeIndex]})` }}
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/80 via-slate-100/70 to-slate-200/95" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-white/80 via-slate-100/70 to-slate-200/95" />
 
       <TopNav />
 
       <button
         type="button"
         onClick={openWindow}
-        className="absolute bottom-10 left-10 z-10 flex flex-col items-center gap-3 rounded-[24px] border border-white/70 bg-white/80 p-4 shadow-[0_20px_40px_rgba(15,23,42,0.16)] backdrop-blur-xl transition-transform duration-200 hover:-translate-y-1"
+        className="absolute bottom-4 left-4 z-10 flex flex-col items-center gap-3 rounded-3xl p-3 transition-transform duration-200 hover:-translate-y-1 sm:bottom-10 sm:left-10 sm:p-4"
       >
-        <img
+        <Image
           src={withBasePath('/finder.png')}
           alt="Finder app icon"
+          width={64}
+          height={64}
           className="h-16 w-16 object-contain"
           style={{ filter: 'drop-shadow(0 10px 16px rgba(15,23,42,0.35))' }}
         />
         <span className="text-sm font-medium text-slate-700">Finder</span>
       </button>
 
-      <div className="absolute bottom-10 right-10 z-10 h-36 w-36 overflow-hidden rounded-full border border-white/70 bg-white/60 shadow-[0_20px_40px_rgba(15,23,42,0.16)] backdrop-blur-xl sm:h-44 sm:w-44">
+      <div className="fixed bottom-4 right-4 z-30 hidden h-56 w-56 sm:bottom-10 sm:right-10 sm:block sm:h-80 sm:w-80 lg:h-96 lg:w-96">
         <HeroScene compact />
       </div>
 
-      <article className="relative z-20 mx-auto flex min-h-screen w-full max-w-[1100px] items-center justify-center px-6 py-12">
+      <article className="relative z-20 mx-auto flex min-h-svh w-full max-w-275 items-center justify-center px-4 pb-24 pt-20 sm:px-6 sm:py-12">
         <div
-          className={`mx-auto w-full max-w-[1040px] rounded-[36px] border border-slate-200/80 bg-white/95 shadow-[0_40px_120px_rgba(15,23,42,0.18)] backdrop-blur-xl transition-all duration-500 ${windowClass}`}
+          className={`mx-auto flex h-[calc(100svh-8rem)] min-h-105 w-full max-w-260 flex-col overflow-hidden rounded-[36px] border border-slate-200/80 bg-white/95 shadow-[0_40px_120px_rgba(15,23,42,0.18)] backdrop-blur-xl transition-all duration-500 sm:h-[calc(100svh-6rem)] lg:max-h-190 ${windowClass}`}
         >
-          <header className="flex items-center justify-between gap-4 rounded-t-[36px] border-b border-slate-200/80 bg-slate-50 px-5 py-4">
+          <header className="flex shrink-0 flex-col gap-3 rounded-t-[36px] border-b border-slate-200/80 bg-slate-50 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <button
@@ -254,7 +245,7 @@ export default function SummersSection() {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 text-sm font-medium text-slate-600">
+            <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-slate-600">
               <span className="rounded-full bg-slate-200/80 px-3.5 py-1.5">Finder</span>
               <span className="text-slate-400">•</span>
               <span className="text-slate-400">{view === 'root' ? 'All My Files' : activeFolder.label}</span>
@@ -272,29 +263,31 @@ export default function SummersSection() {
             </div>
           </header>
 
-          <div className="min-h-[620px]">
+          <div className="min-h-0 flex-1 overflow-y-auto">
             {view === 'root' ? (
-              <div className="grid grid-cols-4 gap-x-6 gap-y-9 p-10 sm:grid-cols-5 lg:grid-cols-6">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-6 p-5 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-8 sm:p-8 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 xl:p-10">
                 {folders.map((folder, idx) => (
                   <button
                     key={folder.slug}
                     type="button"
                     onClick={() => openFolder(idx)}
-                    className="group flex flex-col items-center gap-2.5 rounded-2xl px-3 py-4 text-center transition hover:bg-blue-500/10 focus-visible:bg-blue-500/15 focus-visible:outline-none"
+                    className="group flex flex-col items-center gap-2.5 rounded-2xl px-2 py-3 text-center transition hover:bg-blue-500/10 focus-visible:bg-blue-500/15 focus-visible:outline-none sm:px-3 sm:py-4"
                   >
-                    <img
+                    <Image
                       src={withBasePath('/folder.png')}
                       alt=""
                       aria-hidden="true"
-                      className="h-20 w-20 object-contain transition-transform duration-200 group-hover:scale-105"
+                      width={80}
+                      height={80}
+                      className="h-16 w-16 object-contain transition-transform duration-200 group-hover:scale-105 sm:h-20 sm:w-20"
                       style={{ filter: 'drop-shadow(0 12px 16px rgba(15,23,42,0.3))' }}
                     />
-                    <span className="max-w-[7rem] truncate text-sm font-medium text-slate-800">{folder.label}</span>
+                    <span className="max-w-28 truncate text-sm font-medium text-slate-800">{folder.label}</span>
                   </button>
                 ))}
               </div>
             ) : (
-              <div className="flex h-full flex-col p-8 sm:p-10">
+              <div className="flex h-full flex-col p-5 sm:p-8 lg:p-10">
                 <button
                   type="button"
                   onClick={goBack}
@@ -304,24 +297,25 @@ export default function SummersSection() {
                   Summers
                 </button>
 
-                <div className="mb-9 flex items-start gap-5">
-                  <img
-                    src={withBasePath('/folder.png')}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-16 w-16 shrink-0 object-contain"
-                    style={{ filter: 'drop-shadow(0 10px 14px rgba(15,23,42,0.28))' }}
-                  />
+                <div className="mb-9 flex flex-col items-start gap-4 sm:flex-row sm:gap-5">
                   <div>
-                    <h1 className="text-3xl font-semibold text-slate-950">{activeFolder.label}</h1>
-                    <p className="mt-2.5 max-w-2xl text-sm leading-7 text-slate-600">{activeFolder.description}</p>
+                    <h1 className="text-2xl font-semibold text-slate-950 sm:text-3xl">{activeFolder.label}</h1>
+                    {Array.isArray(activeFolder.description) ? (
+                      <ul className="mt-2.5 max-w-2xl list-disc space-y-1.5 pl-5 text-sm leading-7 text-slate-600">
+                        {activeFolder.description.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="mt-2.5 max-w-2xl text-sm leading-7 text-slate-600">{activeFolder.description}</p>
+                    )}
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-x-6 gap-y-9 sm:grid-cols-4">
+                <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-9 lg:grid-cols-4">
                   {activeFolder.photos.map((photo) => (
                     <div key={photo.caption} className="flex flex-col items-center gap-2.5">
-                      <div className="flex h-28 w-full items-center justify-center rounded-xl border border-slate-200/80 bg-gradient-to-br from-slate-100 to-slate-200/80 shadow-sm">
+                      <div className="flex h-28 w-full items-center justify-center rounded-xl border border-slate-200/80 bg-linear-to-br from-slate-100 to-slate-200/80 shadow-sm">
                         <ImagePlaceholderIcon />
                       </div>
                       <span className="truncate text-xs text-slate-500">{photo.caption}</span>
